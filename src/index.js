@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Button } from "reactstrap";
 
 const propTypes = {
@@ -8,6 +8,7 @@ const propTypes = {
   color: PropTypes.string,
   icon: PropTypes.string,
   text: PropTypes.string,
+  waitingText: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   saving: PropTypes.bool,
   disabled: PropTypes.bool
@@ -18,6 +19,7 @@ const defaultProps = {
   color: "primary",
   icon: "fa fa-save",
   text: "Guardar",
+  waitingText: "Guardando...",
   saving: false,
   disabled: false
 };
@@ -26,21 +28,24 @@ class ReactActionButton extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-    }
+    this.state = {};
   }
 
-  render(){
+  render() {
     return (
       <Button
         type={this.props.type}
         size={this.props.size}
         color={this.props.color}
         onClick={this.props.onClick}
-        disabled={(this.props.saving || this.props.disabled)}
+        disabled={this.props.saving || this.props.disabled}
       >
-        <i className={ (this.props.saving)?"fa fa-spinner fa-spin":this.props.icon } />
-        {' '}{(this.props.saving)?"Guardando...":this.props.text}
+        <i
+          className={
+            this.props.saving ? "fa fa-spinner fa-spin" : this.props.icon
+          }
+        />{" "}
+        {this.props.saving ? this.props.waitingText : this.props.text}
       </Button>
     );
   }
