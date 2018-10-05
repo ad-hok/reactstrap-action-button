@@ -10,7 +10,9 @@ A React component to represent a button that includes a load animation when exec
 `npm i reactstrap-action-button`
 
 ```html
-<ActionButton
+import ReactActionButton from "reactstrap-action-button";
+
+<ReactActionButton
   type="button"
   size="lg"
   color="primary"
