@@ -34,5 +34,5 @@ import ReactActionButton from "reactstrap-action-button";
 |**text**        | text of button | string | Guardar | * |
 |**waitingText**        | waiting text of button | string | Guardando... | * |
 |**onClick**        | action func of button | func | none | any func |
-|**saving**        | indicates that onClick is running | bool | false | * |
+|**saving**        | indicates that onClick is running | bool | false | true - false |
 |**disabled**        | indicates that the button is disabled | bool | false | true - false |
