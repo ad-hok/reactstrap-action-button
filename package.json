@@ -1,6 +1,6 @@
 {
   "name": "reactstrap-action-button",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Standard action Button",
   "main": "build/index.js",
   "scripts": {
