@@ -35,5 +35,6 @@
     "button"
   ],
   "author": "ad-hok",
-  "license": "ISC"
+  "repository": "github:ad-hok/reactstrap-action-button",
+  "license": "MIT"
 }
